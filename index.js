@@ -1,10 +1,12 @@
 
-//Para cambiar de commonjs a ecmascript modules hay que ir a package.json y agregar el campo "type" de preferencia debajo del campo "name"
-//cambiar en el campo type a "module" 
+// Para cambiar de commonjs a ecmascript modules hay que ir a package.json y agregar el campo "type" de preferencia debajo del campo "name"
+// cambiar en el campo "type" el valor a "module"
 // NOTA: si intentas correr la app y no has quitado el metodo "require" va a marcar error porque ese metodo no esta en ecmascipt modules
 
-//en node la sintaxis por defult es commonjs
+// TODO borrar estos comentarios ya no sera necesario importar de manera de commonjs
+// en node la sintaxis por defult es commonjs
 // const express = require('express')
+
 import express from 'express';
 
 /*
@@ -30,9 +32,13 @@ app.get('/ecom',(req, res)=>{
     res.send('Este es el ecommerce')
 })
 
+
+// Agregamos el puerto en una variable
+const port = 4000;
+
 // para crear el servidor
-app.listen(4000, ()=>{ 
-    console.log('Servidor funcionando'); 
+app.listen(port, ()=>{
+    console.log('Servidor funcionando en el puerto ', port);
     // ahora lo puedes ejecutar de 2 maneras:
 
     // node --watch index.js

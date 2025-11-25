@@ -16,8 +16,8 @@ app.get('/',(req, res)=>{
     res.send('Hola mundo en Express')
 })
 
-app.get('/vision',(req, res)=>{
-    res.send('vision')
+app.get('/valores',(req, res)=>{
+    res.send('valores')
 })
 
 
@@ -34,7 +34,7 @@ app.listen(4000, ()=>{
     // esta es la opcion nativa de node, al punto del tutorial que estoy viendo era experimental, pero yo lo corri y no aparece ya el mensaje, tambien dice que no lo puedes correr con archivos de typescript
 
 
-    //la otra opcion es nodemon y lo recomendado es instalarla como dependencia de desarrollo --> npm i -D nodemon --> -D es para especificar que es una dependencia de Desarrollo y te crea el campo para las dependencias de desarrollo en package.json
+    // la otra opcion es nodemon y lo recomendado es instalarla como dependencia de desarrollo --> npm i -D nodemon --> -D es para especificar que es una dependencia de Desarrollo y te crea el campo para las dependencias de desarrollo en package.json
     // nodemon index.js
 
 

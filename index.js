@@ -1,6 +1,11 @@
 
+//Para cambiar de commonjs a ecmascript modules hay que ir a package.json y agregar el campo "type" de preferencia debajo del campo "name"
+//cambiar en el campo type a "module" 
+// NOTA: si intentas correr la app y no has quitado el metodo "require" va a marcar error porque ese metodo no esta en ecmascipt modules
+
 //en node la sintaxis por defult es commonjs
-const express = require('express')
+// const express = require('express')
+import express from 'express';
 
 /*
 * para ver que este funcionando

@@ -16,13 +16,32 @@ app.get('/',(req, res)=>{
     res.send('Hola mundo en Express')
 })
 
+app.get('/vision',(req, res)=>{
+    res.send('vision')
+})
+
+
 app.get('/ecom',(req, res)=>{
     res.send('Este es el ecommerce')
 })
 
 // para crear el servidor
 app.listen(4000, ()=>{ 
-    console.log('Servidor funcionando')
+    console.log('Servidor funcionando'); 
+    // ahora lo puedes ejecutar de 2 maneras:
+
+    // node --watch index.js
+    // esta es la opcion nativa de node, al punto del tutorial que estoy viendo era experimental, pero yo lo corri y no aparece ya el mensaje, tambien dice que no lo puedes correr con archivos de typescript
+
+
+    //la otra opcion es nodemon y lo recomendado es instalarla como dependencia de desarrollo --> npm i -D nodemon --> -D es para especificar que es una dependencia de Desarrollo y te crea el campo para las dependencias de desarrollo en package.json
+    // nodemon index.js
+
+
+
+    // puedes agregar el script en package.json en el campo "scripts"
+    
+    // script que no necesitan la palabra reservada "run" son "start" y "test" todos los demas en especial los scripts personalizados deben decir "npm run {script}" 
 })
 /** 
  * 

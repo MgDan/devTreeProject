@@ -4,7 +4,7 @@ import express from 'express';
 const app = express();
 
 app.get('/',(req, res)=>{
-    res.send('Hola mundo en Express')
+    res.send('Hola mundo en Express | Typescript')
 })
 
 app.get('/valores',(req, res)=>{

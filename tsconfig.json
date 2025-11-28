@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist", // donde se va compilar el proyecto una vez que creemos el build de produccion
+        "rootDir": "./src", // carpeta principal donde encontrara nuestro codigo (de hecho el archivo index se movera a esta carpeta) 
+        "lib": ["ESNext"], // Aqui indicas la lista de bibliotecas y caracteristicas de javascript que quieres que esten disponibles en el codigo de Typescript ||| cuando usas ESNext se refiere a la version mas reciente de ECMASCRIPT
+        "target": "ESNext", // entiendo que es la version a la que se va a compilar el codigo typescript a javascript cuando lo liberes a produccion osea cuando hagas el build
+        "moduleResolution": "NodeNext", // para la sintaxis de modules EcmascriptModules en lugar de commonjs esto tanto en tiempo de desarrollo y en tiempo de compilacion
+        "module": "NodeNext", // tambien es para la sintaxis de export/import de modules pero en el javascript resultante
+        "strict": false, // modo stricto
+        "sourceMap": true, // es un archivo para poder debbugear ya que cuando compile a javascript ya no podrias ver el codigo original pero con esta opcion te lo permite ver el typescript original
+        "esModuleInterop": true, // te permite utilizar modules de commonjs como de ESModule
+        "declaration": true // te permite la generaicion de los archivos .d.ts ya que una vez compilado a javascript se pierden los tipos y esto da una idea a quien lo esta leyendo de los tipados y de informacion que se pierde al compilar
+    },
+    "include": ["src/**/*.ts"] // archivos a incluir en la compilacion del bundle (** todaas las carpetas) (*.ts todos los archivos ts) [hay que cambiar el archivo index.js a index.ts y tambien cambiar el script de nodemon de index.js a index.ts]
+}

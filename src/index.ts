@@ -1,4 +1,4 @@
-import express from 'express';
+import express from 'express'; // agregar modules de typescript para express, solo si marca error (el mismo error te dice que dependencia instalar)
 
 
 const app = express();

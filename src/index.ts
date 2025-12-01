@@ -1,31 +1,14 @@
-import express from 'express'; // agregar modules de typescript para express, solo si marca error (el mismo error te dice que dependencia instalar)
+import app from './server'
 
+// Este archivo solo sera para correr el servidor
 
-const app = express();
-
-app.get('/',(req, res)=>{
-    res.send('Hola mundo en Express | Typescript')
-})
-
-app.get('/valores',(req, res)=>{
-    res.send('valores')
-})
-
-
-app.get('/ecom',(req, res)=>{
-    res.send('Este es el ecommerce')
-})
-
-
-// Agregamos el puerto en una variable
 const port = process.env.port || 4000;
 
-// para crear el servidor
 app.listen(port, ()=>{
     console.log('Servidor funcionando en el puerto ', port);
+});
 
-})
-
+export default app;
 /**
  * Para instalar Typescript lo vamos a instalar como dependencia de desarrollo
  * 

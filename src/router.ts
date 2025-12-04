@@ -15,5 +15,9 @@ router.get('/ecom',(req, res)=>{
     res.send('Este es el ecommerce')
 })
 
+router.post('/auth/register',(req, res)=>{
+    console.log(req.body);
+    // res.send('testing')
+})
 
 export default router;

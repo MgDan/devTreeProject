@@ -1,4 +1,6 @@
 import {Router} from 'express';
+import User from './model/User';
+import { createAccount } from './handler/handler';
 
 const router = Router();
 
@@ -15,9 +17,6 @@ router.get('/ecom',(req, res)=>{
     res.send('Este es el ecommerce')
 })
 
-router.post('/auth/register',(req, res)=>{
-    console.log(req.body);
-    // res.send('testing')
-})
+router.post('/auth/register', createAccount); // llamamos mejor un handler para mantener limpio el codigo
 
 export default router;

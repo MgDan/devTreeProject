@@ -1,3 +1,4 @@
+import colors from 'colors'; // npm i colors NOTA: no es dependencia de desarrollo, tambien se va a ver en produccion
 import app from './server'
 
 // Este archivo solo sera para correr el servidor
@@ -5,7 +6,7 @@ import app from './server'
 const port = process.env.port || 4000;
 
 app.listen(port, ()=>{
-    console.log('Servidor funcionando en el puerto ', port);
+    console.log(colors.bgBlue.white.bold(`Servidor funcionando en el puerto ${port}`));
 });
 
 export default app;

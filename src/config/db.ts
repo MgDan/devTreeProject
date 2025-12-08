@@ -1,3 +1,4 @@
+import colors from "colors";
 import mongoose from "mongoose";
 
 // primero instalar mongoose --> npm i mongoose NOTA: no es dependencia de desarrollo
@@ -16,11 +17,10 @@ export const connDB = async ()=>{
         const {connection} = await mongoose.connect(process.env.MONGO_URI) // nodemon no tiene soporte de variables de entorno, asi que hay que instalar dotenv --> npm i dotenv NOTA: node agrego el soporte a variables de entorno recientemente asi que dejaremos dotenv como dependencia de produccion para evitar fallos con node
 
         const url2 = `${connection.host}:${connection.port}`
-        console.log(`Mongo conectado en  ${url2}`);
+        console.log(colors.cyan.bold(`Mongo conectado en  ${url2}`));
 
-        console.log('conexion!!');
     } catch (error) {
-        console.log('error ', error);
-        process.exit();
+        console.log(colors.bgRed.white.bold(`error ${error}`));
+        process.exit(1);
     }
 }
